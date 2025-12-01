@@ -4,6 +4,8 @@ return {
     root = { "artisan" },
   },
 
+  { import = "lazyvim.plugins.extras.lang.php" },
+
   {
     "adalessa/laravel.nvim",
     dependencies = {
