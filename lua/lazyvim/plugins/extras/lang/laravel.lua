@@ -153,13 +153,23 @@ return {
   },
 
   {
+    "ricardoramirezr/blade-nav.nvim",
+    optional = true,
+    ft = { "blade", "php" },
+  },
+
+  {
     "saghen/blink.cmp",
     optional = true,
-    dependencies = { "adalessa/laravel.nvim", "saghen/blink.compat" },
+    dependencies = { "adalessa/laravel.nvim", "ricardoramirezr/blade-nav.nvim", "saghen/blink.compat" },
     opts = {
       sources = {
-        compat = { "laravel" },
+        compat = { "blade-nav", "laravel" },
         providers = {
+          ["blade-nav"] = {
+            name = "blade-nav",
+            module = "blade-nav.blink",
+          },
           laravel = {
             name = "laravel",
             module = "blink.compat.source",
