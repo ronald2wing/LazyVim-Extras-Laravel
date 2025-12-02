@@ -8,17 +8,16 @@ return {
 
   {
     "adalessa/laravel.nvim",
+    optional = true,
     dependencies = {
-      "tpope/vim-dotenv",
       "MunifTanjim/nui.nvim",
       "nvim-lua/plenary.nvim",
       "nvim-neotest/nvim-nio",
-      "ravitemer/mcphub.nvim", -- optional
     },
     cmd = { "Laravel" },
     keys = {
       {
-        "<leader>ll",
+        "<localleader>ll",
         function()
           Laravel.pickers.laravel()
         end,
@@ -32,56 +31,56 @@ return {
         desc = "Laravel: Open View Finder",
       },
       {
-        "<leader>la",
+        "<localleader>la",
         function()
           Laravel.pickers.artisan()
         end,
         desc = "Laravel: Open Artisan Picker",
       },
       {
-        "<leader>lt",
+        "<localleader>lt",
         function()
           Laravel.commands.run("actions")
         end,
         desc = "Laravel: Open Actions Picker",
       },
       {
-        "<leader>lr",
+        "<localleader>lr",
         function()
           Laravel.pickers.routes()
         end,
         desc = "Laravel: Open Routes Picker",
       },
       {
-        "<leader>lh",
+        "<localleader>lh",
         function()
           Laravel.run("artisan docs")
         end,
         desc = "Laravel: Open Documentation",
       },
       {
-        "<leader>lm",
+        "<localleader>lm",
         function()
           Laravel.pickers.make()
         end,
         desc = "Laravel: Open Make Picker",
       },
       {
-        "<leader>lc",
+        "<localleader>lc",
         function()
           Laravel.pickers.commands()
         end,
         desc = "Laravel: Open Commands Picker",
       },
       {
-        "<leader>lo",
+        "<localleader>lo",
         function()
           Laravel.pickers.resources()
         end,
         desc = "Laravel: Open Resources Picker",
       },
       {
-        "<leader>lp",
+        "<localleader>lp",
         function()
           Laravel.commands.run("command_center")
         end,
@@ -104,7 +103,6 @@ return {
         noremap = true,
       },
     },
-    event = { "VeryLazy" },
     opts = {
       features = {
         pickers = {
